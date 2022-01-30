@@ -18,14 +18,35 @@ var caidan = function(){
         //     break;
        
           case "catch":
-            swal("Gotcha!", "You caught the Snitch!", {
-              icon:"https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/snitch.jpg"
+            swal("Gotcha!", {
+              text:"You caught the Snitch!", 
+              icon:"https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/snitch.jpg?raw=true",
+              content: "input", 
+              buttons: {
+                text: "Unlocking Charm!",
+                closeModal: false,
+              }
+            })
+            .then(charm =>{
+              if (charm == "555") {
+                swal({
+                  title: "新年快乐！我的本命女孩！",
+                  text: "All for you ！",
+                  icon: "https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ruby.jpg?raw=true"
+                })
+              }
+              else {
+                swal({
+                  title: "这不是真正的开锁咒哟！",
+                  icon: "error"
+                })
+              }
             });
             break;
        
           default:
             swal("对不起!你永远是我最棒的彩蛋！Always",{
-              icon: "https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/wq.jpg"
+              icon: "https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/wq.jpg?raw=true"
             }
             );
         }
