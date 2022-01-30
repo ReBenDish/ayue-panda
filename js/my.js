@@ -18,11 +18,16 @@ var caidan = function(){
         //     break;
        
           case "catch":
-            swal("Gotcha!", "You caught the Snitch!", "success");
+            swal("Gotcha!", "You caught the Snitch!", {
+              icon:"https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/snitch.jpg"
+            });
             break;
        
           default:
-            swal("对不起!你永远是我最棒的彩蛋！Always");
+            swal("对不起!你永远是我最棒的彩蛋！Always",{
+              icon: "https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/wq.jpg"
+            }
+            );
         }
       });
 }
