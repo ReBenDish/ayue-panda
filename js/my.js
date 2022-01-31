@@ -18,16 +18,18 @@ var caidan = function(){
         //     break;
        
           case "catch":
-            swal("Gotcha!", {
+            swal({
+              title:"Gotcha!", 
               text:"You caught the Snitch!", 
               icon:"https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/snitch.jpg?raw=true",
               content: "input", 
-              buttons: {
+              button: {
                 text: "Unlocking Charm!",
                 closeModal: false,
-              }
+              },
             })
-            .then(charm =>{
+            .then(charm => {
+              console.log("wangqiu",charm)
               if (charm == "555") {
                 swal({
                   title: "新年快乐！我的本命女孩！",
