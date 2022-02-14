@@ -58,12 +58,12 @@ var caidan = function(){
 $(function() {
 
   var snowflakeURl = [
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_1.png',
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_2.png',
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_3.png',
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_4.png',
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_5.png',
-  'http://images.cnblogs.com/cnblogs_com/LoveOrHate/723567/o_6.png'
+  './fonts/petals/o_1.png',
+  './fonts/petals/o_2.png',
+  './fonts/petals/o_3.png',
+  './fonts/petals/o_4.png',
+  './fonts/petals/o_5.png',
+  './fonts/petals/o_6.png'
   ] //js设置数组存储6张花瓣的图片
 
   var container = $("#content");
@@ -96,7 +96,7 @@ $(function() {
     // 开始飘花
     setInterval(function() {
       // 运动的轨迹
-      var startPositionLeft = Math.random() * visualWidth - 100,
+      var startPositionLeft = Math.random() * visualWidth,
       startOpacity = 1,
       endPositionTop = visualHeight - 40,
       endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
@@ -123,7 +123,7 @@ $(function() {
         $(this).remove() //结束后删除
       });
   
-    }, 200);
+    }, 100);
   } 
   snowflake()
  //执行函数
