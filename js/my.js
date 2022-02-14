@@ -126,6 +126,17 @@ $(function() {
     }, 100);
   } 
   snowflake()
- //执行函数
- 
+  //执行函数
+  // function toggleSound() {
+  //   var music = $('#iloveu');//获取ID  
+  //   console.log(music)
+  //   if (music[0].paused) { //判读是否播放  
+  //     music.paused=false;
+  //     music[0].play(); //没有就播放 
+  //     console.log('play')
+  //   }    
+  // }
+  // setTimeout(() => toggleSound(), 10000)
+  
+  
  })
