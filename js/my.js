@@ -123,7 +123,7 @@ $(function() {
         $(this).remove() //结束后删除
       });
   
-    }, 100);
+    }, 66);
   } 
   snowflake()
   //执行函数
