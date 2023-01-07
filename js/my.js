@@ -140,3 +140,12 @@ $(function() {
   
   
  })
+$('#2020Carousel').carousel({
+  interval: 2000
+})
+$('#2021Carousel').carousel({
+  interval: 2000
+})
+$('#2022Carousel').carousel({
+  interval: 2000
+})
