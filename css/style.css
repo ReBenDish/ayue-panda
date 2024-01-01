@@ -631,7 +631,76 @@ h1, h2, h3, h4, h5, h6, figure {
     right: auto;
   }
 }
-#fh5co-gallery-list {
+.toggle-container {
+  transition: all 0.5s ease; /* 平滑过渡效果 */
+}
+
+.toggle-hidden {
+  display: none;
+}
+img.lazy {
+  /* 懒加载图片的样式，如加载指示器 */
+}
+
+/* #toggleButton {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; 
+} */
+
+/* #fh5co-gallery {
+  background-image: url('../images/bg1-4.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+} */
+
+.video-container {
+  position: fixed;
+  top: 160px; /* 根据需要调整 */
+  right: 20px; /* 根据需要调整 */
+  width: 320px; /* 视频的宽度 */
+  height: 240px; /* 视频的高度 */
+  z-index: 1000; /* 确保在其他元素上面 */
+  display: block; /* 确保视频不是隐藏的 */
+}
+.video-container video {
+  width: 100%; /* 视频宽度填满容器 */
+  height: 100%; /* 视频高度填满容器 */
+  object-fit: cover; /* 保持宽高比，填满容器，可能会裁剪内容 */
+  position: absolute; /* 相对于video-container定位 */
+  top: 0;
+  left: 0;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* 默认隐藏 */
+  z-index: 1001; /* 在视频之上 */
+}
+
+.img-responsive {
+  width: 100%; /* 或者您想要的任何宽度 */
+  height: auto; /* 高度设置为auto保证图片不会形变 */
+  object-fit: cover; /* 保持图片的宽高比 */
+}
+
+
+#floatingButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* 确保按钮在其他元素之上 */
+  cursor: move; /* 鼠标悬停时显示移动光标 */
+  /* 其他样式 */
+}
+
+.fh5co-gallery-list {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
@@ -646,7 +715,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   width: 100%;
 }
-#fh5co-gallery-list li {
+.fh5co-gallery-list li {
   display: block;
   padding: 0;
   margin: 0 0 10px 1%;
@@ -664,18 +733,18 @@ h1, h2, h3, h4, h5, h6, figure {
   border-radius: 7px;
 }
 @media screen and (max-width: 480px) {
-  #fh5co-gallery-list li {
+  .fh5co-gallery-list li {
     margin-left: 0;
   }
 }
-#fh5co-gallery-list li a {
+.fh5co-gallery-list li a {
   min-height: 400px;
   padding: 2em;
   position: relative;
   width: 100%;
   display: block;
 }
-#fh5co-gallery-list li a:before {
+.fh5co-gallery-list li a:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -692,10 +761,10 @@ h1, h2, h3, h4, h5, h6, figure {
   border-radius: 7px;
   background: rgba(0, 0, 0, 0.2);
 }
-#fh5co-gallery-list li a:hover:before {
+.fh5co-gallery-list li a:hover:before {
   background: rgba(0, 0, 0, 0.5);
 }
-#fh5co-gallery-list li a .case-studies-summary {
+.fh5co-gallery-list li a .case-studies-summary {
   width: auto;
   bottom: 2em;
   left: 2em;
@@ -704,37 +773,37 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-gallery-list li a .case-studies-summary {
+  .fh5co-gallery-list li a .case-studies-summary {
     bottom: 1em;
     left: 1em;
     right: 1em;
   }
 }
-#fh5co-gallery-list li a .case-studies-summary span {
+.fh5co-gallery-list li a .case-studies-summary span {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
 }
-#fh5co-gallery-list li a .case-studies-summary h2 {
+.fh5co-gallery-list li a .case-studies-summary h2 {
   color: #fff;
   margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-gallery-list li a .case-studies-summary h2 {
+  .fh5co-gallery-list li a .case-studies-summary h2 {
     font-size: 20px;
   }
 }
-#fh5co-gallery-list li.one-third {
+.fh5co-gallery-list li.one-third {
   width: 32.3%;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-gallery-list li.one-third {
+  .fh5co-gallery-list li.one-third {
     width: 49%;
   }
 }
 @media screen and (max-width: 480px) {
-  #fh5co-gallery-list li.one-third {
+  .fh5co-gallery-list li.one-third {
     width: 100%;
   }
 }

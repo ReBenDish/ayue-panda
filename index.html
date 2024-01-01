@@ -58,7 +58,7 @@
 
 	</head>
 	<body>
-		
+		<button id="floatingButton" class="btn btn-primary">ChatGPT</button>
 		<div class="fh5co-loader"></div>
 		<div id="page">
 			<!-- 飘花 -->
@@ -72,18 +72,28 @@
 				<div class="row">
 					<div class="col-xs-6">
 						<!-- <div id="fh5co-logo"><a href="index.html">Happy Birthday my Princess! <strong>.</strong></a></div> -->
-						<div id="fh5co-logo"><a href="index.html">Love Three Thousand! <strong>.</strong></a></div>
-						<audio id="iloveu" autoplay controls="controls" loop="loop" preload="auto" src="./music/iloveu.mp3">
+						<div id="fh5co-logo"><a href="#" onclick="flowers()">Love Three Thousand! <strong>.</strong></a></div>
+						<!-- <audio id="iloveu" autoplay controls="controls" loop="loop" preload="auto" src="./music/iloveu.mp3">
         					你的浏览器版本太低，不支持audio标签
-						</audio>
+						</audio> -->
+
 					</div>
 				</div>
 				
 			</div>
 		</nav>
 
-		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/bg03.jpg);">
-			<div class="overlay"></div>
+		<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/universe_bg.jpg); background-size: cover; background-position: center;">
+		<!-- <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner"> -->
+			<!-- <button id="mute-button">取消静音</button> -->
+			<div id="video-container" class="video-container">
+				<video id="head-video" controls loop>
+					<source src="./video/9b255c999fb7e4d07e8fbf5d990f4d56.mp4" type="video/mp4">
+					您的浏览器不支持 HTML5 video 标签。
+				</video>
+				<button id="play-button" class="play-button">播放</button>
+			</div>
+			<!-- <div class="overlay"></div> -->
 			<div class="fh5co-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
@@ -96,8 +106,8 @@
 					</div>
 				</div>
 			</div>
+			
 		</header>
-
 		<div id="fh5co-couple" class="fh5co-section-gray" style="background-image:url(images/bg1-2.jpg);">
 			<div class="container">
 				<div class="row">
@@ -112,33 +122,33 @@
 				<div class="couple-wrap animate-box">
 					<div class="couple-half">
 						<div class="groom">
-							<img src="./images/ay_04.jpg" alt="groom" class="img-responsive">
+							<img src="./images/ayue/2023/mmexport1696516536261.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-groom">
 							<h3>Always Love</h3>
-							<p>偷看你的每一眼</p>
-							<p>我的心中都有一场海啸</p>
-							<p>但我静静的站着没有让任何人知道</p>
+							<p>喜欢和你呆在一起</p>
+							<p>所以每天醒来</p>
+							<p>甚是爱你</p>
 						</div>
 					</div>
 					<p class="heart text-center"><i class="icon-heart2"></i></p>
 					<div class="couple-half">
 						<div class="bride">
-							<img src="./images/ay_03.jpg" alt="groom" class="img-responsive">
+							<img src="./images/ayue/2023/mmexport1691932933285.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-bride">
 							<h3>Always You</h3>
-							<p>我喜欢你</p>
-							<p>直至行将就木</p>
-							<p>直至斗转星移</p>
+							<p>我相信科学</p>
+							<p>但我也相信命运</p>
+							<p>所以我是坚定的wy至上主义者</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<div id="fh5co-gallery" style="padding:50px">
-			<div class="container">
+		<div id="fh5co-gallery" style="padding:50px;">
+			<div class="container" >
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin-bottom: 20px;">
 						<span>PANADA</span>
@@ -148,790 +158,191 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left;">
-						<h2 style="font-size: 30px;">2019-2020</h2>
-						<p>越宝的大学时光</p>
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left; width: 100%;">
+						<h2 style="font-size: 30px;">2019</h2>
+						<div>
+							<p>相遇</p>
+							<!-- 展开/收起按钮 -->
+							<button id="toggleButton_2019" class="btn btn-primary" style="position: absolute; bottom: 10px; right: 0%; transform: translateX(-50%);">展开</button>
+						</div>
 					</div>
 				</div>
-				<div id="2020Carousel" class="carousel slide" >
+				<div id="2019Carousel" class="carousel slide toggle-container" style="border-radius: 20px;">
 					<!-- 轮播（Carousel）指标 -->
-					<ol class="carousel-indicators">
-						<li data-target="#2020Carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#2020Carousel" data-slide-to="1"></li>
-						<li data-target="#2020Carousel" data-slide-to="2"></li>
-						<li data-target="#2020Carousel" data-slide-to="3"></li>
-						<li data-target="#2020Carousel" data-slide-to="4"></li>
-						<li data-target="#2020Carousel" data-slide-to="5"></li>
-						<!-- <li data-target="#myCarousel" data-slide-to="6"></li> -->
-					</ol>   
+					<ol class="carousel-indicators" id="2019CarouselIndicators"></ol>
+					
 					<!-- 轮播（Carousel）项目 -->
-					<div class="carousel-inner"style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;">
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;border-radius: 8px;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;border-radius: 8px;"  src="./images/ay_08.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_08.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>新加坡</span>
-										<h2 style="color: #fcf8e3;">2019.02.24</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_02.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_02.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>下沙天街</span>
-										<h2 style="color: #fcf8e3;">2019.10.18</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_09.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_09.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>浙江理工（某教室）</span>
-										<h2 style="color: #fcf8e3;">2019.10.18</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_13.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_13.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>烟台</span>
-										<h2 style="color: #fcf8e3;">2019.??.??</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_17.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_17.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>终于毕业了！（好快呀）</span>
-										<h2 style="color: #fcf8e3;">2020.06.20</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_10.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_10.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>阿越回烟台了（以为故事就结束了）</span>
-										<h2 style="color: #fcf8e3;">2020.06.30</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+					<div class="carousel-inner" id="2019CarouselInner" style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;"></div>
+					
 					<!-- 轮播（Carousel）导航 -->
-					<a class="left carousel-control" href="#2020Carousel" role="button" data-slide="prev">
+					<a class="left carousel-control" href="#2019Carousel" role="button" style="border-radius: 20px;" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="right carousel-control" href="#2020Carousel" role="button" data-slide="next">
+					<a class="right carousel-control" href="#2019Carousel" role="button" style="border-radius: 20px;" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left;">
-						<h2 style="font-size: 30px;margin-top: 20px;">2021</h2>
-						<p>失&得</p>
+				<div class="row row-bottom-padded-md toggle-container toggle-hidden" id="imageContainer_2019" >
+					<div class="col-md-12">
+						<ul class="fh5co-gallery-list" id="gallery_list_2019">
+						</ul>		
 					</div>
 				</div>
-				<div id="2021Carousel" class="carousel slide"  style="margin-bottom: 20px;">
-					<!-- 轮播（Carousel）指标 -->
-					<ol class="carousel-indicators">
-						<li data-target="#2021Carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#2021Carousel" data-slide-to="1"></li>
-						<li data-target="#2021Carousel" data-slide-to="2"></li>
-						<li data-target="#2021Carousel" data-slide-to="3"></li>
-						<li data-target="#2021Carousel" data-slide-to="4"></li>
-						<li data-target="#2021Carousel" data-slide-to="5"></li>
-						<li data-target="#2021Carousel" data-slide-to="6"></li>
-						<li data-target="#2021Carousel" data-slide-to="7"></li>
-						<li data-target="#2021Carousel" data-slide-to="8"></li>
-						<li data-target="#2021Carousel" data-slide-to="9"></li>
-						<li data-target="#2021Carousel" data-slide-to="10"></li>
-						<li data-target="#2021Carousel" data-slide-to="11"></li>
-						<li data-target="#2021Carousel" data-slide-to="12"></li>
-						<li data-target="#2021Carousel" data-slide-to="13"></li>
-					</ol>   
-					<!-- 轮播（Carousel）项目 -->
-					<div class="carousel-inner"style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;">
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_18.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_18.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>新东方部花时期（小葵的迷失）</span>
-										<h2 style="color: #fcf8e3;">2021.04.09</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_12.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_12.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>回家了！（好羡慕小外甥）</span>
-										<h2 style="color: #fcf8e3;">2021.05.09</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_07.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_07.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>欢迎回来！快乐~</span>
-										<h2 style="color: #fcf8e3;">2021.06.29</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_20.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_20.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>summer 限定！（很难不爱辣妹！）</span>
-										<h2 style="color: #fcf8e3;">2021.07.20</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_22.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_22.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>是谁在图书馆拍照！（可爱捏）</span>
-										<h2 style="color: #fcf8e3;">2021.08.22</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_22_1.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_22_1.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>不是很酒吧的酒吧（想守护越宝的快乐）</span>
-										<h2 style="color: #fcf8e3;">2021.09.16</h2>
-									</div>
-								</a>
-							</div>
-						</div>
 
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_23.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_23.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>国庆，和小迟在一起的王老师好乖巧呀！（谢谢小迟）</span>
-										<h2 style="color: #fcf8e3;">2021.10.02</h2>
-									</div>
-								</a>
-							</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left; width: 100%;">
+						<h2 style="font-size: 30px;">2020</h2>
+						<div>
+							<p>未知&启航</p>
+							<!-- 展开/收起按钮 -->
+							<button id="toggleButton_2020" class="btn btn-primary" style="position: absolute; bottom: 10px; right: 0%; transform: translateX(-50%);">展开</button>
 						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_24.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_24.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>每个认真的瞬间都很迷人（专注是你击败我心防的利器）</span>
-										<h2 style="color: #fcf8e3;">2021.10.02</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_25.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_25.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>小在成都，与同事小姐姐拍的照（出差时代的到来）</span>
-										<h2 style="color: #fcf8e3;">2021.10.14</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_26.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_26.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>重庆！</span>
-										<h2 style="color: #fcf8e3;">2021.10.20</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_27.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_27.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>表哥好！我叫任小葵！（重庆买房计划启动）</span>
-										<h2 style="color: #fcf8e3;">2021.10.20</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_28.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_28.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>中秋节访客</span>
-										<h2 style="color: #fcf8e3;">2021.11.20</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_29.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_29.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>圣诞节限定！你是谁的小麋鹿？(想介绍所有人认识)</span>
-										<h2 style="color: #fcf8e3;">2021.12.25</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_32.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_32.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>公司大聚餐！沉思的王老师又在想些什么呢？(2021就这样吧)</span>
-										<h2 style="color: #fcf8e3;">2021.12.25</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-
 					</div>
+				</div>
+				<div id="2020Carousel" class="carousel slide toggle-container" style="border-radius: 20px;">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators" id="2020CarouselIndicators"></ol>
+					
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner" id="2020CarouselInner" style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;"></div>
+					
 					<!-- 轮播（Carousel）导航 -->
-					<a class="left carousel-control" href="#2021Carousel" role="button" data-slide="prev">
+					<a class="left carousel-control" href="#2020Carousel" role="button" style="border-radius: 20px;" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="right carousel-control" href="#2021Carousel" role="button" data-slide="next">
+					<a class="right carousel-control" href="#2020Carousel" role="button" style="border-radius: 20px;" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left;">
-						<h2 style="font-size: 30px;margin-top: 20px;">2022</h2>
-						<p>守护&成长</p>
+				<div class="row row-bottom-padded-md toggle-container toggle-hidden" id="imageContainer_2020" >
+					<div class="col-md-12">
+						<ul class="fh5co-gallery-list" id="gallery_list_2020">
+						</ul>		
 					</div>
 				</div>
-				<div id="2022Carousel" class="carousel slide"  style="margin-bottom: 20px;">
-					<!-- 轮播（Carousel）指标 -->
-					<ol class="carousel-indicators">
-						<li data-target="#2022Carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#2022Carousel" data-slide-to="1"></li>
-						<li data-target="#2022Carousel" data-slide-to="2"></li>
-						<li data-target="#2022Carousel" data-slide-to="3"></li>
-						<li data-target="#2022Carousel" data-slide-to="4"></li>
-						<li data-target="#2022Carousel" data-slide-to="5"></li>
-						<li data-target="#2022Carousel" data-slide-to="6"></li>
-						<li data-target="#2022Carousel" data-slide-to="7"></li>
-						<li data-target="#2022Carousel" data-slide-to="8"></li>
-						<li data-target="#2022Carousel" data-slide-to="9"></li>
-						<li data-target="#2022Carousel" data-slide-to="10"></li>
-						<li data-target="#2022Carousel" data-slide-to="11"></li>
-						<li data-target="#2022Carousel" data-slide-to="12"></li>
-						<li data-target="#2022Carousel" data-slide-to="13"></li>
-						<li data-target="#2022Carousel" data-slide-to="14"></li>
-						<li data-target="#2022Carousel" data-slide-to="15"></li>
-					</ol>   
-					<!-- 轮播（Carousel）项目 -->
-					<div class="carousel-inner"style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;">
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_33.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_33.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>雪人宝宝：“你夺走了我的目光！”</span>
-										<h2 style="color: #fcf8e3;">2022.01.22</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_34.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_34.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>滑雪大师认证</span>
-										<h2 style="color: #fcf8e3;">2022.01.26</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_36.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_36.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>特殊的隔离时光，小葵也很担心。</span>
-										<h2 style="color: #fcf8e3;">2022.01.31</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_39.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_39.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>春日的午后，阳光在你的回眸中都显得多余</span>
-										<h2 style="color: #fcf8e3;">2022.03.12</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_37.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_37.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>晚霞已经足够美了</span>
-										<h2 style="color: #fcf8e3;">2022.04.10</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_38.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_38.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>“放飞风筝就是放飞烦恼”</span>
-										<h2 style="color: #fcf8e3;">2021.05.04</h2>
-									</div>
-								</a>
-							</div>
-						</div>
 
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_41.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_41.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>cml坏女人！</span>
-										<h2 style="color: #fcf8e3;">2021.06.02</h2>
-									</div>
-								</a>
-							</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left; width: 100%;">
+						<h2 style="font-size: 30px;">2021</h2>
+						<div>
+							<p>抉择&成长</p>
+							<!-- 展开/收起按钮 -->
+							<button id="toggleButton_2021" class="btn btn-primary" style="position: absolute; bottom: 10px; right: 0%; transform: translateX(-50%);">展开</button>
 						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_42.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_42.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>生日快乐！(小葵又错过了一次生日)</span>
-										<h2 style="color: #fcf8e3;">2022.07.18</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_43.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_43.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>草原&星空</span>
-										<h2 style="color: #fcf8e3;">2022.07.31</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item active" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_44.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_44.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>俏皮可爱的在逃公主！</span>
-										<h2 style="color: #fcf8e3;">2022.09.11</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_46.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_46.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>男友力max（没错我有一个女朋友！）</span>
-										<h2 style="color: #fcf8e3;">2022.10.21</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_47.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_47.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>知道你会来</span>
-										<h2 style="color: #fcf8e3;">2022.10.24</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<div class="item" style="width:inherit; height:inherit; max-width:100%; max-height:100%;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit; object-fit:cover;margin: auto;"  src="./images/ay_48.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_48.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>阿姨的随手一拍（任小葵你看看！)</span>
-										<h2 style="color: #fcf8e3;">2022.10.24</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_49.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_49.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>洱海，洱海，我爱你</span>
-										<h2 style="color: #fcf8e3;">2022.10.24</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_50.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_50.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>1024的礼物</span>
-										<h2 style="color: #fcf8e3;">2022.10.24</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item" style="width:inherit; height:inherit;margin: auto;">
-							<img decoding="async" style="width:inherit; height: inherit;object-fit:cover; margin: auto;"  src="./images/ay_51.jpg" alt="First slide">
-							<div class="carousel-caption">
-								<!-- 2019.02.24:新加坡 -->
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_51.jpg">
-									<div class="case-studies-summary" style="color: #fff;margin-bottom: 0;">
-										<span>初雪</span>
-										<h2 style="color: #fcf8e3;">2022.12.01</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-
 					</div>
+				</div>
+				<div id="2021Carousel" class="carousel slide toggle-container" style="border-radius: 20px;">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators" id="2021CarouselIndicators"></ol>
+					
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner" id="2021CarouselInner" style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;"></div>
+					
 					<!-- 轮播（Carousel）导航 -->
-					<a class="left carousel-control" href="#2022Carousel" role="button" data-slide="prev">
+					<a class="left carousel-control" href="#2021Carousel" role="button" style="border-radius: 20px;" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="right carousel-control" href="#2022Carousel" role="button" data-slide="next">
+					<a class="right carousel-control" href="#2021Carousel" role="button" style="border-radius: 20px;" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
+				<div class="row row-bottom-padded-md toggle-container toggle-hidden" id="imageContainer_2021" >
+					<div class="col-md-12">
+						<ul class="fh5co-gallery-list" id="gallery_list_2021">
+						</ul>		
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left; width: 100%;">
+						<h2 style="font-size: 30px;">2022</h2>
+						<div>
+							<p>收获&认可</p>
+							<!-- 展开/收起按钮 -->
+							<button id="toggleButton_2022" class="btn btn-primary" style="position: absolute; bottom: 10px; right: 0%; transform: translateX(-50%);">展开</button>
+						</div>
+					</div>
+				</div>
+				<div id="2022Carousel" class="carousel slide toggle-container" style="border-radius: 20px;">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators" id="2022CarouselIndicators"></ol>
+					
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner" id="2022CarouselInner" style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;"></div>
+					
+					<!-- 轮播（Carousel）导航 -->
+					<a class="left carousel-control" href="#2022Carousel" role="button" style="border-radius: 20px;" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#2022Carousel" role="button" style="border-radius: 20px;" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+				<div class="row row-bottom-padded-md toggle-container toggle-hidden" id="imageContainer_2022" >
+					<div class="col-md-12">
+						<ul class="fh5co-gallery-list" id="gallery_list_2022">
+						</ul>		
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left; width: 100%;">
+						<h2 style="font-size: 30px;">2023</h2>
+						<div>
+							<p>我爱你2023</p>
+							<!-- 展开/收起按钮 -->
+							<button id="toggleButton_2023" class="btn btn-primary" style="position: absolute; bottom: 10px; right: 0%; transform: translateX(-50%);">展开</button>
+						</div>
+					</div>
+				</div>
+				<div id="2023Carousel" class="carousel slide toggle-container" style="border-radius: 20px;">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators" id="2023CarouselIndicators"></ol>
+					
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner" id="2023CarouselInner" style="width: 80%;height: 600px; margin: auto; border-radius: 8px;text-align: center;"></div>
+					
+					<!-- 轮播（Carousel）导航 -->
+					<a class="left carousel-control" href="#2023Carousel" role="button" style="border-radius: 20px;" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#2023Carousel" role="button" style="border-radius: 20px;" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+				<div class="row row-bottom-padded-md toggle-container toggle-hidden" id="imageContainer_2023" >
+					<div class="col-md-12">
+						<ul class="fh5co-gallery-list" id="gallery_list_2023">
+						</ul>		
+					</div>
+				</div>
+
+
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" style="margin: 0px;text-align: left;">
-						<h2 style="font-size: 30px;margin-top: 20px;">2023</h2>
+						<h2 style="font-size: 30px;margin-top: 20px;">2024</h2>
 						<p>未完待续...</p>
 					</div>
 				</div>
 
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-12">
-						<ul id="fh5co-gallery-list">
-							
-							<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_08.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_08.jpg">
-									<div class="case-studies-summary">
-										<span>新加坡</span>
-										<h2>2019.02.24</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_02.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_02.jpg" class="color-2">
-									<div class="case-studies-summary">
-										<span>下沙天街</span>
-										<h2>2019.10.18</h2>
-									</div>
-								</a>
-							</li>
-
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_09.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_09.jpg" class="color-3">
-									<div class="case-studies-summary">
-										<span>浙江理工（某教室）</span>
-										<h2>2019.10.18</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_13.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_13.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>烟台</span>
-										<h2>（不知道啥时候）</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_17.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_17.jpg" class="color-3">
-									<div class="case-studies-summary">
-										<span>终于毕业了！（好快呀）</span>
-										<h2>2020.06.20</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_10.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_10.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>阿越回烟台了。（以为故事就结束了）</span>
-										<h2>2020.06.30</h2>
-									</div>
-								</a>
-							</li> -->
-
-							<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_18.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_18.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>C位出道吧（新东方部花时期）</span>
-										<h2>2021.04.09</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_12.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_12.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>回家了！（好羡慕小外甥）</span>
-										<h2>2021.05.09</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_07.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_07.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>欢迎回来！快乐</span>
-										<h2>2021.06.29</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_20.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_20.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>summer 限定！（很难不爱辣妹！）</span>
-										<h2>2021.07.20</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_22.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_22.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>是谁在图书馆拍照！（可爱捏）</span>
-										<h2>2021.08.22</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_22_1.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_22_1.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>是！小葵的快乐瞬间！不是很酒吧的酒吧</span>
-										<h2>2021.09.16</h2>
-									</div>
-								</a>
-							</li>
-
-							
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_23.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_23.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>国庆回家，和小迟在一起的王老师好乖巧呀！</span>
-										<h2>2021.10.02</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_24.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_24.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>不会承认王老师每个认真的瞬间都超迷人！（fall）</span>
-										<h2>2021.10.02</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_25.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_25.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>小葵没记错的话应该是在成都，和同事小姐姐拍的照</span>
-										<h2>2021.10.14</h2>
-									</div>
-								</a>
-							</li>
-
-							
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_26.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_26.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>在重庆了！</span>
-										<h2>2021.10.20</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_27.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_27.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>表哥你好！我是王老师的学生叫任小葵！（不会忘记王老师对重庆的喜欢）</span>
-										<h2>2021.10.20</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_28.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_28.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>是中秋节了吗？</span>
-										<h2>2021.11.20</h2>
-									</div>
-								</a>
-							</li>
-
-							
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_29.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_29.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>圣诞节限定！你是谁的小麋鹿？</span>
-										<h2>2021.12.25</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_32.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_32.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>公司大聚餐，剪刀手！沉思的王老师又在想些什么呢？</span>
-										<h2>2021.12.25</h2>
-									</div>
-								</a>
-							</li> -->
-							<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_33.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_33.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>雪人宝宝：你夺走了我的目光！</span>
-										<h2>2022.01.22</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_34.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_34.jpg" class="color-4">
-									<div class="case-studies-summary">
-										<span>怎么可以不发呢！小葵觉得很可爱！</span>
-										<h2>2022.01.26</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_35.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_35.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>探头探脑小笨蛋！在外面好开心呀！（小葵也想去）</span>
-										<h2>2021.01.27</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_36.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_36.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>要开心呀！小葵很想你！“你哭我也不开心”</span>
-										<h2>2022.01.31</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_37.jpg); "> 
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_37.jpg" class="color-5">
-									<div class="case-studies-summary">
-										<span>这是我见过最美的晚霞。</span>
-										<h2>2021.04.10</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_38.jpg); ">
-								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_38.jpg" class="color-6">
-									<div class="case-studies-summary">
-										<span>飞呀飞呀！小风筝！</span>
-										<h2>2022.05.04</h2>
-									</div>
-								</a>
-							</li> -->
+						<ul class="fh5co-gallery-list">
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/ay_52.jpg); ">
 								<a href="https://github.com/ReBenDish/ayue-panda/blob/gh-pages/images/ay_52.jpg" class="color-6">
 									<div class="case-studies-summary">
@@ -946,7 +357,7 @@
 			</div>
 		</div>
 
-		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/bg1-1.jpg);">
+		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/foot_01.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row animate-box">
